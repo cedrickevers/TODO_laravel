@@ -9,19 +9,19 @@ use Illuminate\Support\Facades\Auth;
 class TodoController extends Controller
 {
     /**
-* Constructor.
-*
-* @return void
-*/
+     * Constructor.
+     *
+     * @return void
+     */
     public function __construct()
     {
         $this->middleware('auth');
     }
     /**
-* Display a listing of the resource.
-*
-* @return \Illuminate\Http\Response
-*/
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         //
@@ -33,11 +33,11 @@ class TodoController extends Controller
         }
     }
     /**
-* Get a validator for an incoming Todo request.
-*
-* @param  array  $request
-* @return \Illuminate\Contracts\Validation\Validator
-*/
+     * Get a validator for an incoming Todo request.
+     *
+     * @param  array  $request
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
     protected function validator(array $request)
     {
         return Validator::make($request, [
@@ -47,20 +47,20 @@ class TodoController extends Controller
         ]);
     }
     /**
-* Show the form for creating a new resource.
-*
-* @return \Illuminate\Http\Response
-*/
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
         return view('todo.addtodo');
     }
     /**
-* Store a newly created resource in storage.
-*
-* @param  \Illuminate\Http\Request  $request
-* @return \Illuminate\Http\Response
-*/
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
         $this->validator($request->all())->validate();
@@ -69,32 +69,32 @@ class TodoController extends Controller
         }
     }
     /**
-* Display the specified resource.
-*
-* @param  \App\Todo  $todo
-* @return \Illuminate\Http\Response
-*/
+     * Display the specified resource.
+     *
+     * @param  \App\Todo  $todo
+     * @return \Illuminate\Http\Response
+     */
     public function show(Todo $todo)
     {
         return view('todo.todo', ['todo' => $todo]);
     }
     /**
-* Show the form for editing the specified resource.
-*
-* @param  \App\Todo  $todo
-* @return \Illuminate\Http\Response
-*/
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Todo  $todo
+     * @return \Illuminate\Http\Response
+     */
     public function edit(Todo $todo)
     {
         return view('todo.edittodo', ['todo' => $todo]);
     }
     /**
-* Update the specified resource in storage.
-*
-* @param  \Illuminate\Http\Request  $request
-* @param  \App\Todo  $todo
-* @return \Illuminate\Http\Response
-*/
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Todo  $todo
+     * @return \Illuminate\Http\Response
+     */
     public function update(Request $request, Todo $todo)
     {
         $this->validator($request->all())->validate();
@@ -103,11 +103,11 @@ class TodoController extends Controller
         }
     }
     /**
-* Remove the specified resource from storage.
-*
-* @param  \App\Todo  $todo
-* @return \Illuminate\Http\Response
-*/
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Todo  $todo
+     * @return \Illuminate\Http\Response
+     */
     public function destroy(Todo $todo)
     {
         if ($todo->delete()) {
