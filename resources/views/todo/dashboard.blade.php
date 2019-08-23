@@ -13,7 +13,7 @@
                                             </li>
 @endforeach
 @else
-<li class="list-group-item"> Rien à faire pour l'instant <a href="{{ url('/todo/create') }}"> Click ici</a> to add new todo. </li>
+<li class="list-group-item"> Rien à faire pour l'instant <a href="{{ url('/todo/create') }}"> Click ici</a> pour afficher une nouvelle liste </li>
 @endif
     </ul>
     </div>

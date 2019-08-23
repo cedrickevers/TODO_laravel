@@ -48,7 +48,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/todo') }}">
-                        Home
+                        Accueil
                     </a>
                 </div>
 
@@ -62,17 +62,17 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
+                            <li><a href="{{ url('/login') }}">Se connecter</a></li>
+                            <li><a href="{{ url('/register') }}">S'enrgistrerr</a></li>
                         @else
                         <li> 
-                            <a href="{{ url('/todo/create') }}">Add Todo</a> 
+                            <a href="{{ url('/todo/create') }}">Ajouter une tâche</a> 
                         </li>
                         <li>
                             <a href="{{ url('/logout') }}"
                                 onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
-                                Logout
+                                Se déco
                             </a>
 
                             <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">

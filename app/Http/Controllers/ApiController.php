@@ -154,7 +154,7 @@ class ApiController extends Controller
                 return $this->prepareResult(true, [], [], "Todo deleted");
             }
         } else {
-            return $this->prepareResult(false, [], "unauthorized", "You are not authenticated to delete this todo");
+            return $this->prepareResult(false, [], "unauthorized", "Touche pas à ça !");
         }
     }
 }

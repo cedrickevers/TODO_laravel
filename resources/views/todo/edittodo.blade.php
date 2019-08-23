@@ -8,7 +8,7 @@
                 {{ csrf_field() }}
                 {{ method_field('PUT') }}
   <div class="form-group">
-    <label for="todo" class="col-sm-2 control-label">Todo</label>
+    <label for="todo" class="col-sm-2 control-label">A faire</label>
     <div class="col-md-5">
       <input type="text" class="form-control" id="todo" name="todo" placeholder="todo" value="{{$todo->todo}}">
        @if ($errors->has('todo'))
@@ -19,7 +19,7 @@
     </div>
   </div>
   <div class="form-group">
-    <label for="category" class="col-sm-2 control-label">Category</label>
+    <label for="category" class="col-sm-2 control-label">Catégorie</label>
     <div class="col-md-5">
       <input type="text" class="form-control" id="category" name="category" placeholder="category" value="{{$todo->category}}">
      @if ($errors->has('category'))
@@ -42,7 +42,7 @@
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-md-5">
-      <button type="submit" class="btn btn-default">Update</button>
+      <button type="submit" class="btn btn-default">Modification</button>
     </div>
   </div>
 </form>

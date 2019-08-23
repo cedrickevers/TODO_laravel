@@ -9,7 +9,7 @@
                   <div class="panel-body">
                     {{$todo->description}}
                   </div>
-              <div class="panel-footer"><strong>Categorie:</strong> {{$todo->category}}</div>    
+              <div class="panel-footer"><strong>Catégorie:</strong> {{$todo->category}}</div>    
               </div>
                
         </div>
